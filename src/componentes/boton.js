@@ -1,17 +1,15 @@
 import React from "react";
+import "../styles/Boton.css";
 
-function boton({texto, esbotonclic}){
+function Boton({ texto, esbotonclic, manejarClic }) {
+  return (
+    <button
+      className={esbotonclic ? "boton-clic" : "boton-reiniciar"}
+      onClick={manejarClic}>
 
-return (
-<button className={esbotonclic ? "boton-clic" : "boton-reiniciar"}>
-
-{texto}
-
-</button>
-
-
-)
-
-
-
+      {texto}
+    </button>
+  );
 }
+
+export default Boton;
